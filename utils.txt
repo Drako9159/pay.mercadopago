@@ -1,0 +1,3 @@
+npm install express morgan dotenv nodemon -D -E
+npm install mercadopago
+.\ngrok.exe http 3000

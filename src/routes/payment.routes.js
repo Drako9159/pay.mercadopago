@@ -5,11 +5,11 @@ const router = Router()
 
 router.post("/create-order", createOrder)
 
-router.get("/failure")
+router.get("/failure", (req, res) => res.send("failure"))
 
-router.get("/success")
+router.get("/success", (req, res) => res.send("success"))
 
-router.get("/pending")
+router.get("/pending", (req, res) => res.send("pending"))
 
 router.post("/webhook", receiveWebhook)
 

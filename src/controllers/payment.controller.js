@@ -31,12 +31,14 @@ export async function receiveWebhook(req, res) {
   try {
     if (payment.type === "payment") {
       const data = await mercadopago.payment.findById(payment["data.id"]);
+      console.log(data)
+      // save info in database
+      // info is assigned when payment is completed
     }
-    res.status(204).json({ message: "ok" });
+    return res.status(204).json({ message: "ok" });
   } catch (error) {
     console.log(error);
     return res.status(500).json({ error: error.message });
   }
 
-  return res.send("webhook");
 }
